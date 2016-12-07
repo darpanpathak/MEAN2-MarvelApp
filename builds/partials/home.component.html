@@ -1,0 +1,27 @@
+<site-menu></site-menu>
+<div class="container">
+    <!-- Jumbotron Header -->
+    <header class="jumbotron hero-spacer">
+        <h1>A Warm Welcome!</h1>
+        <p>This page loads a dynamic data from the database( in this case static data from json file). I've used *ngFor from angular2 in this example. </p>
+    </header>
+    <hr>
+    <div class="row">
+        <div class="col-lg-6" *ngFor="let profile of profilelist">
+            <div class="row" style="background:white; padding:10px; margin:5px; color:black">
+                <div class="col-sm-6 col-md-4">
+                    <img [src]="profile.image" alt="" class="img-circle img-responsive" />
+                </div>
+                <div class="col-sm-6 col-md-8">
+                    <h4>{{ profile.name }}</h4>
+                    <small><cite title="San Francisco, USA">{{profile.Birthplace}} <i class="glyphicon glyphicon-map-marker">
+                        </i></cite></small>
+                    <p>
+                        {{profile.description}}
+                        <br /><br/> First Appearance : {{profile.First_appearance}}</p>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+</div>

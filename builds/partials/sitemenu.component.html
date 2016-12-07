@@ -1,0 +1,31 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" [routerLink]="['/home']">SampleNg2App</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a [routerLink]="['/home']">Home</a>
+                </li>
+                <li>
+                    <a [routerLink]="['/about']">About</a>
+                </li>
+                <li>
+                    <a>Contact Us</a>
+                </li>
+      
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a [routerLink]="['login']" *ngIf="!isLoggedin">Login</a></li>
+                <li><a *ngIf="isLoggedin">{{username}}</a></li>
+                <li><a *ngIf="isLoggedin" (click)="logout()"> Logout </a></li>
+            </ul>
+        </div>
+    </div>
+</div>

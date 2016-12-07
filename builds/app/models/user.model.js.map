@@ -1,0 +1,1 @@
+{"version":3,"sources":["models/user.model.ts"],"names":[],"mappings":";AAAA;IAII,cAAY,QAAe,EAAE,QAAe;IAAE,CAAC;IACnD,WAAC;AAAD,CALA,AAKC,IAAA;AALY,YAAI,OAKhB,CAAA","file":"user.model.js","sourcesContent":["export class User {\r\n    username: string;\r\n    password: string;\r\n\r\n    constructor(username:string, password:string){}\r\n}"]}

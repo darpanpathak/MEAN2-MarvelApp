@@ -1,0 +1,49 @@
+[{
+    "id": 1,
+    "name": "Spider-Man",
+    "description": "Spider-Man is a fictional superhero appearing in American comic books published by Marvel Comics. The character was created by writer-editor Stan Lee and writer-artist Steve Ditko, and first appeared ... ",
+    "image": "http://vignette4.wikia.nocookie.net/marvel-contestofchampions/images/0/0b/Spider-Man_(Classic)_portrait.png/revision/latest?cb=20150830075418",
+    "First_appearance": "Amazing Fantasy #15 (August 1962)",
+    "Birthplace": "New York City"
+},
+{
+    "id": 2,
+    "name": "Hulk",
+    "description": "The Hulk is a fictional superhero created by writer Stan Lee and artist Jack Kirby, who first appeared in the debut issue of the comic book The Incredible Hulk in May 1962 published by Marvel Comics. ",
+    "image": "http://vignette1.wikia.nocookie.net/marvel-contestofchampions/images/d/d7/Hulk_portrait.png/revision/latest?cb=20151118002756",
+    "First_appearance": "The Incredible Hulk #1 (May 1962)",
+    "Birthplace": "New York City"
+},
+{
+    "id": 3,
+    "name": "Iron Man",
+    "description": "Iron Man is a fictional superhero appearing in American comic books published by Marvel Comics, as well as its associated media. he decides to use his suit to fight against evil forces and save the world.",
+    "image": "http://vignette1.wikia.nocookie.net/marvel-contestofchampions/images/c/c0/Iron_Man_portrait.png/revision/latest?cb=20150830074231",
+    "First_appearance": "Tales of Suspense #39 (March 1963)",
+    "Birthplace": "Earth"
+},
+{
+    "id": 4,
+    "name": "Doctor Strange",
+    "description": "Dr. Stephen Vincent Strange is a fictional superhero appearing in American comic books published by Marvel Comics. Created by artist Steve Ditko and writer Stan Lee, the character first appeared in Strange Tales #110",
+    "image": "http://static.wixstatic.com/media/762351_aded2d1edb0f456080a948cf21e1f898~mv2.jpg_256",
+    "First_appearance": "Strange Tales #110 (July 1963)",
+    "Birthplace": "Earth"
+},
+{
+    "id": 5,
+    "name": "Wolverine",
+    "description": "Wolverine is a mutant who possesses animal-keen senses, enhanced physical capabilities, and powerful regenerative ability known as a healing factor. He has been depicted variously as a member of the X-Men, Alpha Flight, and the Avengers.",
+    "image": "http://vignette3.wikia.nocookie.net/marvel-contestofchampions/images/a/a6/Wolverine_preview.png/revision/latest?cb=20150830080604",
+    "First_appearance": "The Incredible Hulk #180 (Cameo, Oct. 1974)",
+    "Birthplace": "Canada"
+},
+{
+    "id": 6,
+    "name": "Black Widow",
+    "description": "Black Widow is a fictional superhero appearing in American comic books published by Marvel Comics. Created by editor and plotter Stan Lee, scripter Don Rico, and artist Don Heck, the character first appeared in Tales of Suspense No. 52.",
+    "image": "http://vignette1.wikia.nocookie.net/avengersalliance2/images/f/ff/Blackwidow_AoU_3_evac-support.png/revision/latest?cb=20160413180511",
+    "First_appearance": "Tales of Suspense #52 (April 1964)",
+    "Birthplace": "Russia"
+}
+ ]
