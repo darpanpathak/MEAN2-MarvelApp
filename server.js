@@ -26,6 +26,7 @@ app.use('/', indexRouter);
 app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'builds')));
+app.use(express.static(path.join(__dirname, 'node_modules')));
 app.set('views', 'src/views');
 
 app.use(function (req, res, next) {

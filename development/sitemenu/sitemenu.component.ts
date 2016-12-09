@@ -12,7 +12,7 @@ export class SitemenuComponent{
 
     constructor(public authService: AuthenticationService) {
         this.isLoggedin = authService.isLoggedin();
-        this.username = JSON.parse(localStorage.getItem("token")).username;
+        this.username = JSON.parse(localStorage.getItem("username"));
     }
 
     logout(){

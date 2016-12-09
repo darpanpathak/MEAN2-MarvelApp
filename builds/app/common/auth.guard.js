@@ -10,12 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
+var angular2_jwt_js_1 = require('angular2-jwt/angular2-jwt.js');
 var AuthGuard = (function () {
     function AuthGuard(router) {
         this.router = router;
     }
     AuthGuard.prototype.canActivate = function () {
-        if (localStorage.getItem('token'))
+        if (angular2_jwt_js_1.tokenNotExpired())
             return true;
         this.router.navigate(['/login']);
         return false;

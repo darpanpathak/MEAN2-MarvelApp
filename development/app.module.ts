@@ -5,6 +5,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { AuthGuard } from './common/auth.guard';
+import { AUTH_PROVIDERS } from 'angular2-jwt/angular2-jwt.js';
 
 import { AppComponent } from './app.component';
 import { loginComponent } from './login/login.component';
@@ -18,7 +19,7 @@ import { ProfileServices } from './services/profile.service';
 @NgModule({
     imports: [BrowserModule, RouterModule, routing, HttpModule, FormsModule],
     declarations: [AppComponent, loginComponent, HomeComponent, SitemenuComponent, AboutComponent],
-    providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }, AuthGuard, AuthenticationService,ProfileServices],
+    providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }, AUTH_PROVIDERS, AuthGuard, AuthenticationService, ProfileServices],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

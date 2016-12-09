@@ -15,6 +15,7 @@ var common_1 = require('@angular/common');
 var http_1 = require('@angular/http');
 var forms_1 = require('@angular/forms');
 var auth_guard_1 = require('./common/auth.guard');
+var angular2_jwt_js_1 = require('angular2-jwt/angular2-jwt.js');
 var app_component_1 = require('./app.component');
 var login_component_1 = require('./login/login.component');
 var home_component_1 = require('./home/home.component');
@@ -30,7 +31,7 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, router_1.RouterModule, app_routes_1.routing, http_1.HttpModule, forms_1.FormsModule],
             declarations: [app_component_1.AppComponent, login_component_1.loginComponent, home_component_1.HomeComponent, sitemenu_component_1.SitemenuComponent, about_component_1.AboutComponent],
-            providers: [{ provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }, auth_guard_1.AuthGuard, authentication_service_1.AuthenticationService, profile_service_1.ProfileServices],
+            providers: [{ provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }, angular2_jwt_js_1.AUTH_PROVIDERS, auth_guard_1.AuthGuard, authentication_service_1.AuthenticationService, profile_service_1.ProfileServices],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

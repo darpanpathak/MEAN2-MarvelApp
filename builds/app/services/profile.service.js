@@ -9,20 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
 var headers_1 = require('../common/headers');
 require('rxjs/add/operator/map');
+var angular2_jwt_js_1 = require('angular2-jwt/angular2-jwt.js');
 var ProfileServices = (function () {
-    function ProfileServices(http) {
-        this.http = http;
+    function ProfileServices(authHttp) {
+        this.authHttp = authHttp;
     }
     ProfileServices.prototype.getProfileList = function () {
-        return this.http.get('/api/profilelist', { headers: headers_1.contentHeaders })
+        return this.authHttp.get('/api/profilelist', { headers: headers_1.contentHeaders })
             .map(function (res) { return res.json(); });
     };
     ProfileServices = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
+        __metadata('design:paramtypes', [angular2_jwt_js_1.AuthHttp])
     ], ProfileServices);
     return ProfileServices;
 }());

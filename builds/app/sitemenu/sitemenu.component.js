@@ -14,7 +14,7 @@ var SitemenuComponent = (function () {
     function SitemenuComponent(authService) {
         this.authService = authService;
         this.isLoggedin = authService.isLoggedin();
-        this.username = JSON.parse(localStorage.getItem("token")).username;
+        this.username = JSON.parse(localStorage.getItem("username"));
     }
     SitemenuComponent.prototype.logout = function () {
         this.authService.logout();

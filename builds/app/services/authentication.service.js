@@ -12,13 +12,15 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var http_1 = require('@angular/http');
 var headers_1 = require('../common/headers');
+var angular2_jwt_js_1 = require('angular2-jwt/angular2-jwt.js');
 var AuthenticationService = (function () {
     function AuthenticationService(router, http) {
         this.router = router;
         this.http = http;
     }
     AuthenticationService.prototype.logout = function () {
-        localStorage.removeItem("token");
+        localStorage.removeItem("id_token");
+        localStorage.removeItem("username");
         this.router.navigate(['login']);
     };
     AuthenticationService.prototype.login = function (user) {
@@ -26,8 +28,14 @@ var AuthenticationService = (function () {
         var body = JSON.stringify(user);
         this.http.post('/api/auth/login', body, { headers: headers_1.contentHeaders })
             .subscribe(function (response) {
-            localStorage.setItem('token', JSON.stringify(response.json().token));
-            _this.router.navigate(['home']);
+            if (JSON.stringify(response.json().success) === "true") {
+                localStorage.setItem('id_token', JSON.stringify(response.json().token));
+                localStorage.setItem('username', JSON.stringify(response.json().username));
+                _this.router.navigate(['home']);
+            }
+            else {
+                window.alert(JSON.stringify(response.json().message));
+            }
         }, function (error) {
             alert(error.text());
             console.log(error.text());
@@ -35,12 +43,10 @@ var AuthenticationService = (function () {
         });
     };
     AuthenticationService.prototype.isLoggedin = function () {
-        if (localStorage.getItem("token") === null) {
-            this.router.navigate(['Login']);
-        }
-        else {
+        if (angular2_jwt_js_1.tokenNotExpired())
             return true;
-        }
+        else
+            return false;
     };
     AuthenticationService = __decorate([
         core_1.Injectable(), 
