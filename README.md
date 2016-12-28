@@ -4,6 +4,8 @@ This repository includes angularjs2, nodejs and expressjs setup with bootswatch 
 **username: test**
 **password: test** 
 
+**Note:** I have added one more plugin videogular2 in this application. On the home page you will see a video player. In order to run that video, you have to click on it. 
+
 ## Assumptions
 You already have following things installed on your machine.
 
