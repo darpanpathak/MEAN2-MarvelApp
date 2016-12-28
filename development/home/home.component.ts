@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { SitemenuComponent } from '../sitemenu/sitemenu.component';
 import { ProfileServices } from '../services/profile.service';
+import { VideoPlayerTestComponent } from '../videoplayer/videoplayertest.component';
 
 @Component({
     selector: 'home',
-    providers: [SitemenuComponent],
+    providers: [SitemenuComponent, VideoPlayerTestComponent],
     moduleId: module.id,
     templateUrl: '../../partials/home.component.html'
 })

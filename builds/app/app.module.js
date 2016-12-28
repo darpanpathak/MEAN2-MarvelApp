@@ -24,13 +24,18 @@ var sitemenu_component_1 = require('./sitemenu/sitemenu.component');
 var app_routes_1 = require('./app.routes');
 var authentication_service_1 = require('./services/authentication.service');
 var profile_service_1 = require('./services/profile.service');
+var videoplayertest_component_1 = require('./videoplayer/videoplayertest.component');
+var core_2 = require('videogular2/core');
+var controls_1 = require('videogular2/controls');
+var overlay_play_1 = require('videogular2/overlay-play');
+var buffering_1 = require('videogular2/buffering');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, router_1.RouterModule, app_routes_1.routing, http_1.HttpModule, forms_1.FormsModule],
-            declarations: [app_component_1.AppComponent, login_component_1.loginComponent, home_component_1.HomeComponent, sitemenu_component_1.SitemenuComponent, about_component_1.AboutComponent],
+            imports: [platform_browser_1.BrowserModule, router_1.RouterModule, app_routes_1.routing, http_1.HttpModule, forms_1.FormsModule, core_2.VgCoreModule, controls_1.VgControlsModule, overlay_play_1.VgOverlayPlayModule, buffering_1.VgBufferingModule],
+            declarations: [app_component_1.AppComponent, login_component_1.loginComponent, home_component_1.HomeComponent, sitemenu_component_1.SitemenuComponent, about_component_1.AboutComponent, videoplayertest_component_1.VideoPlayerTestComponent],
             providers: [{ provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }, angular2_jwt_js_1.AUTH_PROVIDERS, auth_guard_1.AuthGuard, authentication_service_1.AuthenticationService, profile_service_1.ProfileServices],
             bootstrap: [app_component_1.AppComponent]
         }), 

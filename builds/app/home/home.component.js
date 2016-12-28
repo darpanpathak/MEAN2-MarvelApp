@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var sitemenu_component_1 = require('../sitemenu/sitemenu.component');
 var profile_service_1 = require('../services/profile.service');
+var videoplayertest_component_1 = require('../videoplayer/videoplayertest.component');
 var HomeComponent = (function () {
     function HomeComponent(profileservice) {
         this.profileservice = profileservice;
@@ -24,7 +25,7 @@ var HomeComponent = (function () {
     HomeComponent = __decorate([
         core_1.Component({
             selector: 'home',
-            providers: [sitemenu_component_1.SitemenuComponent],
+            providers: [sitemenu_component_1.SitemenuComponent, videoplayertest_component_1.VideoPlayerTestComponent],
             moduleId: module.id,
             templateUrl: '../../partials/home.component.html'
         }), 

@@ -15,10 +15,16 @@ import { SitemenuComponent } from './sitemenu/sitemenu.component';
 import { routing } from './app.routes';
 import { AuthenticationService } from './services/authentication.service';
 import { ProfileServices } from './services/profile.service';
+import { VideoPlayerTestComponent } from './videoplayer/videoplayertest.component';
+
+import {VgCoreModule} from 'videogular2/core';
+import {VgControlsModule} from 'videogular2/controls';
+import {VgOverlayPlayModule} from 'videogular2/overlay-play';
+import {VgBufferingModule} from 'videogular2/buffering';
 
 @NgModule({
-    imports: [BrowserModule, RouterModule, routing, HttpModule, FormsModule],
-    declarations: [AppComponent, loginComponent, HomeComponent, SitemenuComponent, AboutComponent],
+    imports: [BrowserModule, RouterModule, routing, HttpModule, FormsModule, VgCoreModule, VgControlsModule, VgOverlayPlayModule, VgBufferingModule],
+    declarations: [AppComponent, loginComponent, HomeComponent, SitemenuComponent, AboutComponent, VideoPlayerTestComponent],
     providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }, AUTH_PROVIDERS, AuthGuard, AuthenticationService, ProfileServices],
     bootstrap: [AppComponent]
 })

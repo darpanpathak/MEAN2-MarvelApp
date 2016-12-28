@@ -1,0 +1,1 @@
+{"version":3,"sources":["videoplayer/index.ts"],"names":[],"mappings":";;;;AAAA,iBAAc,6BAA6B,CAAC,EAAA","file":"index.js","sourcesContent":["export * from './videoplayertest.component';"]}
